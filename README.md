@@ -19,3 +19,7 @@ High-frequency trading strategy using Limit Order Book (LOB) data with:
 git clone https://github.com/yourusername/lob-predictive-modeling.git
 cd lob-predictive-modeling
 pip install -r requirements.txt
+
+#Usage
+```bash
+python main.py --symbol AAPL --date 2012-06-21 --model xgboost --levels 5 --horizon 5
