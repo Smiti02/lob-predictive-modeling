@@ -1,0 +1,39 @@
+# Update your XGBoost parameters in model_params.yaml
+xgboost:
+  n_estimators: 500
+  # n_estimators: 1000
+  max_depth: 8
+  #max_depth: 7
+  learning_rate: 0.01
+  #learning_rate: 0.005
+  #subsample: 0.9
+  subsample: 0.8
+  colsample_bytree: 0.8
+  min_child_weight: 5
+  scale_pos_weight: 3  # Adjust for class imbalance
+  objective: "binary:logistic"
+  eval_metric: "logloss"
+  early_stopping_rounds: 50
+  reg_alpha: 0.1
+  reg_lambda: 1.0
+
+lstm:
+  units: 64
+  dropout: 0.2
+  learning_rate: 0.001
+  batch_size: 64
+  epochs: 20
+
+transformer:
+  head_size: 32
+  num_heads: 4
+  ff_dim: 64
+  dropout: 0.2
+  num_layers: 3
+  learning_rate: 0.001
+  batch_size: 32
+  epochs: 20
+
+# data_filters:
+#   max_spread_pct: 0.01  # 1% of mid price
+#   max_time_gap: 1.0     # 1 second

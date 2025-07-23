@@ -1,0 +1,2 @@
+data_directory: "data"
+model_directory: "models"
